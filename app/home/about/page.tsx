@@ -1,11 +1,11 @@
 import Image from "next/image";
-import mike from "../images/mike.jpeg"
+import mike from "@/app/ui/images/mike.jpeg"
 
-export default function About() {
+export default function Page() {
     return (
     <div className="flex flex-col h-[100vh] justify-evenly">
         <div className="flex justify-evenly items-center text-[1vw]">
-            <div className="w-[35vw] h-[75vh] p-5 flex flex-col justify-evenly border-x-white border rounded-md shadow-2xl shadow-red-500">
+            <div className="w-[35vw] h-[75vh] p-5 flex flex-col justify-evenly border-x-white border rounded-md shadow-2xl shadow-zinc-100">
                 <div className="border-x-red-200 border m-4 h-1/3 p-2">
                     <h1 className="text-center text-2xl">About me</h1>
                     <p>Hello! I'm Justin Espinal, a software developer passionate about leveraging technology to drive innovation, solving real-world problems, and leading others to do their best! With a background in Software Engineering, my expertise spans a variety of different areas!</p>
@@ -36,7 +36,7 @@ export default function About() {
                     </ul>
                 </div>
             </div>
-            <div className="flex items-center shadow-2xl shadow-red-500">
+            <div className="flex items-center shadow-2xl shadow-zinc-100">
                 <Image
                     src={mike}
                     alt="Picture of Justin Espinal with Mike Bloomberg"

@@ -1,11 +1,9 @@
-import About from "./ui/components/About";
-import Hero from "./ui/components/Hero";
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className="overflow-x-hidden	">
+    <div>
       <main>
-        <Hero/>
-        <About/>
+        <Link href="/home">Get Started</Link>
       </main>
     </div>
   );
