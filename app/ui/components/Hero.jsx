@@ -33,6 +33,7 @@ export default function Hero() {
                         "creating solutions",
                         "communicating new ideas",
                         "working in teams",
+                        "being their best self"
                     ]}
                     loop={true}
                     cursor

@@ -1,6 +1,13 @@
 
 export default function Page(){
     return (
-        <div>Experience here</div>
+        <div>
+            <div>
+                
+            </div>
+            <div>
+
+            </div>
+        </div>
     )
 }
