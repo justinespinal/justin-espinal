@@ -16,15 +16,12 @@ export default function CompanyCard(
         company, 
         position, 
         image_url, 
-        searchParams
     }: {
         id: string; 
         company: string; 
         position: string; 
         image_url: string, 
-        searchParams?: {
-            companyId ?: string;
-        }}
+    }
     ){
     const searchParameters = useSearchParams()
     const pathname = usePathname()
