@@ -10,15 +10,16 @@ async function seedCompanies() {
       id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
       name VARCHAR(255) NOT NULL,
       position VARCHAR(255) NOT NULL,
-      image_url VARCHAR(255) NOT NULL
+      image_url VARCHAR(255) NOT NULL,
+      info VARCHAR(350) NOT NULL
     );
   `;
 
   const insertedCompanies = await Promise.all(
     companies.map(async (company) => {
       return client.sql`
-        INSERT INTO companies (id, name, position, image_url)
-        VALUES (${company.id}, ${company.name}, ${company.position}, ${company.image_url})
+        INSERT INTO companies (id, name, position, image_url, info)
+        VALUES (${company.id}, ${company.name}, ${company.position}, ${company.image_url}, ${company.info})
         ON CONFLICT (id) DO NOTHING;
       `;
     }),
