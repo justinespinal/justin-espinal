@@ -40,7 +40,7 @@ export default function CompanyCard(
 
 
     return (
-        <div className="bg-black w-[50vw] h-[15vh] p-10 rounded-md flex items-center">
+        <div className="bg-[rgb(24,24,27)] w-[50vw] h-[15vh] p-10 rounded-md flex items-center border-gray-700 border">
             <Image
               src={"/assets"+image_url}
               height={100}

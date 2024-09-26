@@ -1,8 +1,9 @@
 import { fetchCompanies } from "@/app/lib/data"
 import { fetchCompanyById } from "@/app/lib/data";
-
+import "../../ui/global.css"
 import CompanyCard from "@/app/ui/components/CompanyCard"
 import Image from "next/image";
+import { refreshCompanies } from "@/app/lib/action";
 
 export default async function Page({
     searchParams,
@@ -16,7 +17,11 @@ export default async function Page({
     const companyById = await fetchCompanyById(searchParams?.companyId)
     console.log(companyById[0])
     return (
-        <div className="flex justify-evenly items-center h-full">
+        <div className="h-full bg-black overflow-auto">
+          <form action={refreshCompanies}>
+              <button>Refresh</button>
+          </form>
+          <div className="flex justify-evenly items-center h-full bg-black fadeInAnimation">
             <div className="flex flex-col gap-6">
                 {companies?.map((company) => (
                     <div 
@@ -43,6 +48,7 @@ export default async function Page({
                 </div>
               ))
             }
+          </div>
         </div>
     )
 }

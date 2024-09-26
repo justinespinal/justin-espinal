@@ -7,7 +7,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons"
 
 export default function SideNav(){
     return (
-        <div className="flex flex-col mr-auto">
+        <div className="flex md:flex-col md:mr-auto">
             <Link 
               className="p-4 hover:bg-slate-500"
               href="/home"

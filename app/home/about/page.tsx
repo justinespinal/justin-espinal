@@ -1,33 +1,36 @@
 import Image from "next/image";
 import mike from "@/app/ui/images/mike.jpeg"
-
+import LottieTech from "../../ui/components/LottieTech";
 export default function Page() {
     return (
-    <div className="flex flex-col h-[100vh] justify-evenly">
-        <div className="flex justify-evenly items-center text-[1vw]">
-            <div className="w-[35vw] h-[75vh] p-5 flex flex-col justify-evenly border-x-white border-4 rounded-md shadow-2xl shadow-zinc-100">
-                <div className="border-x-red-200 border-2 m-4 h-1/3 p-2 rounded-md">
-                    <h1 className="text-center text-2xl font-bold">About me</h1>
-                    <p>Hello! I'm Justin Espinal, a software developer passionate about leveraging technology to drive innovation, solving real-world problems, and leading others to do their best! With a background in Software Engineering, my expertise spans a variety of different areas!</p>
+    <div className="flex flex-col h-full justify-evenly bg-black overflow-auto">
+        <div className="flex flex-col md:flex-row justify-evenly items-center text-[1vw] fadeInAnimation">
+            <div className="flex items-center md:w-[30vw]">
+                <LottieTech/>
+            </div>
+            <div className="w-[75vw] md:w-[35vw] h-full md:p-5 flex flex-col justify-evenly border-x-white border-4 rounded-md mb-4 md:mb-0">
+                <div className="border-x-red-200 border-2 m-4 h-[1/3vh] p-2 rounded-md">
+                    <h1 className="text-center text-4xl md:text-2xl font-bold">About me</h1>
+                    <p className="text-2xl md:text-lg text-center">Hello! I'm Justin Espinal, a software developer passionate about leveraging technology to drive innovation, solving real-world problems, and leading others to do their best! With a background in Software Engineering, my expertise spans a variety of different areas!</p>
                 </div>
-                <div className="border-x-red-200 border-2 m-4 p-2 h-1/3 rounded-md">
-                    <h1 className="text-center text-2xl font-bold">Skills</h1>
-                    <ul className="list-disc ml-5">
+                <div className="border-x-red-200 border-2 m-4 p-2 h-[1/3vh] rounded-md">
+                    <h1 className="text-center font-bold text-4xl md:text-2xl">Skills</h1>
+                    <ul className="list-disc ml-5 text-2xl md:text-lg">
                         <li>Java, Javascript, C++, Python, Ruby, Typescript, SQL</li>
                         <li>React, Vue, Next.js</li>
                         <li>HTML, CSS, Tailwind CSS, SCSS</li>
                         <li>Jira, Figma, Agile, CI/CD</li>
-                        <li>Fullstack Development</li>
+                        <li>Fullstack Development, App Development</li>
                     </ul>
                 </div>
-                <div className="border-x-red-200 border-2 m-4 p-2 h-1/3 text-sm rounded-md">
-                    <h1 className="text-center text-2xl font-bold">Education</h1>
+                <div className="border-x-red-200 border-2 m-4 p-2 h-[1/3vh] text-sm rounded-md">
+                    <h1 className="text-center text-4xl md:text-2xl font-bold">Education</h1>
                     <ul>
-                        <h1 className="text-xl font-bold">CUNY Queens College</h1>
-                        <h3>Degree: Computer Science B.S.</h3>
-                        <h3>Expected: May 2025</h3>
-                        <h1 className="text-xl font-bold">Relevant Course Work</h1>
-                        <ul className="list-disc ml-5">
+                        <h1 className="text-3xl font-bold">CUNY Queens College</h1>
+                        <h3 className="text-2xl">Degree: Computer Science B.S.</h3>
+                        <h3 className="text-2xl">Expected: May 2025</h3>
+                        <h1 className="text-3xl font-bold">Relevant Course Work</h1>
+                        <ul className="list-disc ml-5 text-2xl">
                             <li>Data Structures & Algorithms</li>
                             <li>OOP in C++ & Java</li>
                             <li>Software Engineering</li>
@@ -35,15 +38,6 @@ export default function Page() {
 
                     </ul>
                 </div>
-            </div>
-            <div className="flex items-center shadow-2xl shadow-zinc-100">
-                <Image
-                    src={mike}
-                    alt="Picture of Justin Espinal with Mike Bloomberg"
-                    width={800}
-                    height={1050}
-                    className=""
-                />
             </div>
         </div>
     </div>
