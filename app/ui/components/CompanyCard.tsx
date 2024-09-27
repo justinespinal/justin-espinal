@@ -40,19 +40,19 @@ export default function CompanyCard(
 
 
     return (
-        <div className="bg-[rgb(24,24,27)] w-[50vw] h-[15vh] p-10 rounded-md flex items-center border-gray-700 border">
+        <div className="bg-[rgb(24,24,27)] border-gray-700 border w-full md:w-[50vw] h-[20vh] p-10 rounded-md flex items-center">
             <Image
               src={"/assets"+image_url}
               height={100}
               width={100}
               alt={company+" company logo"}
-              className="w-[5vw] h-[10vh]"
+              className="w-[75px] md:w-[100px] rounded-md"
             />
             <div className="flex flex-col pl-2">
-               <h1 className="text-[3vh]">{company}</h1> 
-               <h3 className="text-[1.5vh]">{position}</h3>
+               <h1 className="text-[2.5vh] md:text-[2em]">{company}</h1> 
+               <h3 className="text-[1em]">{position}</h3>
             </div>
-            <FontAwesomeIcon icon={companyId === id ? faChevronLeft : faChevronRight} className="ml-auto cursor-pointer" onClick={openCard}/>
+            <FontAwesomeIcon icon={companyId === id ? faChevronLeft : faChevronRight} style={{color: "#374151"}} className="ml-auto cursor-pointer" onClick={openCard}/>
         </div>
     )
 }

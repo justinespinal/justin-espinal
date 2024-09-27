@@ -4,4 +4,5 @@ export type Company = {
     position: string;
     image_url: string;
     info: string;
+    info_url: string;
 }

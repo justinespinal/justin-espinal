@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
       <div className="flex justify-center">
-        <div className="w-screen h-screen items-center justify-evenly fadeInAnimation flex flex-col md:flex-row">
+        <div className="w-screen h-screen items-center lg:justify-evenly fadeInAnimation flex flex-col xl:flex-row">
           <Image 
             src={justin}
             id="justinImage"
@@ -16,12 +16,12 @@ export default function Hero() {
             height={700}
             alt="Headshot image of Justin Espinal"
           />
-          <div className="w-[30vw] h-[75vh] flex flex-col justify-center">
+          <div className="w-[50vw] h-[75vh] flex flex-col justify-center items-center">
             <div className="flex flex-col md:flex-row items-center gap-[10px] text-3xl font-bold">
-              <h1 className="p-0">Justin Espinal</h1>
+              <h1 className="text-center">Justin Espinal</h1>
               <Socials size="2xl" />
             </div>
-            <div className="text-xl font-medium">
+            <div className="text-xl font-medium md:mr-[45px]">
                 <h1>A Software Engineer dedicated to</h1>
                 <h1>
                 <span className="typeWriter">

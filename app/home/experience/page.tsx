@@ -17,11 +17,11 @@ export default async function Page({
     const companyById = await fetchCompanyById(searchParams?.companyId)
     console.log(companyById[0])
     return (
-        <div className="h-full bg-black overflow-auto">
+        <div className="h-full bg-gradient-to-l from-transparent to-blue-950 overflow-auto">
           <form action={refreshCompanies}>
               <button>Refresh</button>
           </form>
-          <div className="flex justify-evenly items-center h-full bg-black fadeInAnimation">
+          <div className="flex flex-col md:flex-row justify-evenly items-center h-full fadeInAnimation">
             <div className="flex flex-col gap-6">
                 {companies?.map((company) => (
                     <div 
@@ -35,7 +35,7 @@ export default async function Page({
             {searchParams?.companyId &&
               companyById.map((company) => (
                 <div 
-                  className="w-[25vw] h-[80vh] bg-black rounded-lg"
+                  className="w-auto m-4 md:m-0 md:w-[30vw] h-[80vh] bg-[rgb(24,24,27)] border-gray-700 border p-2 rounded-lg flex flex-col divide-y divide-gray-700 items-center gap-2"
                   key={company.id}
                 >
                   <Image
@@ -44,7 +44,16 @@ export default async function Page({
                     width={100}
                     height={100}
                   />
-                  <h1>{company.info}</h1>
+                  <h1 className="w-full pt-2">{company.info}</h1>
+                  <div>
+                  <Image
+                    src={"/assets"+company.info_url}
+                    alt={company.name + " info pic"}
+                    width={1000}
+                    height={100}
+                    className="pt-4 rounded-lg"
+                  />
+                  </div>
                 </div>
               ))
             }
