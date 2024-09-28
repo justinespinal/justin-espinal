@@ -1,5 +1,5 @@
 import { db } from '@vercel/postgres';
-import { companies } from '../lib/placeholder-data';
+import { companies, projects } from '../lib/placeholder-data';
 
 const client = await db.connect();
 
@@ -29,11 +29,38 @@ async function seedCompanies() {
   return insertedCompanies;
 }
 
+async function seedProjects() {
+  await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
+  console.log("first")
+  await client.sql`
+    CREATE TABLE IF NOT EXISTS projects (
+      id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+      title VARCHAR(255) NOT NULL,
+      about VARCHAR(500) NOT NULL,
+      tech VARCHAR(255) NOT NULL,
+      site VARCHAR(100),
+      github VARCHAR(100)
+    );
+  `;
+  console.log("Passed creating projects table")
+  const insertedProjects = await Promise.all(
+    projects.map(async (project) => {
+      return client.sql`
+        INSERT INTO projects (title, about, tech, site, github)
+        VALUES (${project.title}, ${project.about}, ${project.tech}, ${project.site}, ${project.github})
+        ON CONFLICT (id) DO NOTHING;
+      `;
+    }),
+  );
+  console.log("In projects")
+  return insertedProjects;
+}
+
 export async function GET() {
-    console.log("test")
     try {
       await client.sql`BEGIN`;
       await seedCompanies();
+      await seedProjects();
       await client.sql`COMMIT`;
   
       return Response.json({ message: 'Database seeded successfully' });

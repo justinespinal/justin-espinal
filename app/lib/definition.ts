@@ -6,3 +6,12 @@ export type Company = {
     info: string;
     info_url: string;
 }
+
+export type Project = {
+    id: string;
+    title: string;
+    about: string;
+    tech: string;
+    site: string;
+    github: string;
+}
