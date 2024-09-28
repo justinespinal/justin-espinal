@@ -7,7 +7,7 @@ import "../styling/hero.css"
 import Image from "next/image";
 export default function Hero() {
     return (
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-20 mt-5 md:mb-5 md:mt-5">
         <div className="w-screen h-screen items-center lg:justify-evenly fadeInAnimation flex flex-col xl:flex-row">
           <Image 
             src={justin}
@@ -21,7 +21,7 @@ export default function Hero() {
               <h1 className="text-center">Justin Espinal</h1>
               <Socials size="2xl" />
             </div>
-            <div className="text-xl font-medium md:mr-[45px]">
+            <div className="text-xl text-center font-medium md:mr-[45px]">
                 <h1>A Software Engineer dedicated to</h1>
                 <h1>
                 <span className="typeWriter">
