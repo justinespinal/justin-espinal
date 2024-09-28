@@ -55,16 +55,16 @@
 //   return insertedProjects;
 // }
 
-// export async function GET() {
+export async function GET() {
 //     try {
 //       await client.sql`BEGIN`;
 //       await seedCompanies();
 //       await seedProjects();
 //       await client.sql`COMMIT`;
-  
+        return Response.json({message: "hello"})
 //       return Response.json({ message: 'Database seeded successfully' });
 //     } catch (error) {
 //       await client.sql`ROLLBACK`;
 //       return Response.json({ error }, { status: 500 });
 //     }
-//   }
+   }
