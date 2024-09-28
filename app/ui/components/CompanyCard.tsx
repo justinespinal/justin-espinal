@@ -40,7 +40,7 @@ export default function CompanyCard(
 
 
     return (
-        <div className="bg-[rgb(24,24,27)] border-gray-700 border w-full md:w-[50vw] h-[20vh] p-10 rounded-md flex items-center">
+        <div className="bg-[rgb(24,24,27)] border-gray-700 border w-[75vw] md:w-[50vw] h-[20vh] pl-10 pt-10 pb-10 pr-5 rounded-md flex items-center">
             <Image
               src={"/assets"+image_url}
               height={100}
@@ -50,7 +50,7 @@ export default function CompanyCard(
             />
             <div className="flex flex-col pl-2">
                <h1 className="text-[2.5vh] md:text-[2em]">{company}</h1> 
-               <h3 className="text-[1em]">{position}</h3>
+               <h3 className="text-[0.75em]">{position}</h3>
             </div>
             <FontAwesomeIcon icon={companyId === id ? faChevronLeft : faChevronRight} style={{color: "#374151"}} className="ml-auto cursor-pointer" onClick={openCard}/>
         </div>
