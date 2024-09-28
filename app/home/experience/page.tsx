@@ -3,7 +3,6 @@ import { fetchCompanyById } from "@/app/lib/data";
 import "../../ui/global.css"
 import CompanyCard from "@/app/ui/components/CompanyCard"
 import Image from "next/image";
-import { refreshCompanies } from "@/app/lib/action";
 
 export default async function Page({
     searchParams,
@@ -18,9 +17,6 @@ export default async function Page({
     console.log(companyById[0])
     return (
         <div className="h-full bg-gradient-to-l from-transparent to-blue-950 overflow-auto">
-          <form action={refreshCompanies}>
-              <button>Refresh</button>
-          </form>
           <div className="flex flex-col md:flex-row justify-evenly items-center h-full fadeInAnimation">
             <div className="flex flex-col gap-6">
                 {companies?.map((company) => (
