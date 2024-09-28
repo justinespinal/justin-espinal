@@ -5,6 +5,6 @@ import { redirect } from 'next/navigation';
 
 
 export async function refreshCompanies(){
-    revalidatePath('/home/experience')
-    redirect('/home/experience')
+    revalidatePath('/home/projects')
+    redirect('/home/projects')
 }

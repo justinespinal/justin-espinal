@@ -1,6 +1,6 @@
 import { db } from '@vercel/postgres';
 import { companies, projects } from '../lib/placeholder-data';
-
+import { sql } from '@vercel/postgres';
 const client = await db.connect();
 
 async function seedCompanies() {
