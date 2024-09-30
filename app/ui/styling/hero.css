@@ -8,7 +8,7 @@
     height: 75vh;
     width:auto;
     --g: 4px; /* the gap */
-    --b: 12px; /* border thickness*/
+    --b: 5px; /* border thickness*/
     --c: white; /* the color */
 
     padding: calc(var(--g) + var(--b));

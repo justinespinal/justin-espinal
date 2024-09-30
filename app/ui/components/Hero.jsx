@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
       <div className="flex justify-center mb-20 mt-5 md:mb-5 md:mt-5">
-        <div className="w-screen h-screen items-center lg:justify-evenly fadeInAnimation flex flex-col xl:flex-row">
+        <div className="w-screen h-screen items-center lg:justify-evenly fadeInAnimation flex flex-col xl:flex-row m-5 md:m-0">
           <Image 
             src={justin}
             id="justinImage"
