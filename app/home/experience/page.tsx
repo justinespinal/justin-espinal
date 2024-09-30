@@ -16,8 +16,8 @@ export default async function Page({
     const companyById = await fetchCompanyById(searchParams?.companyId)
     console.log(companyById[0])
     return (
-        <div className="h-full bg-gradient-to-l from-transparent to-blue-950 overflow-auto">
-          <div className="flex flex-col md:flex-row justify-evenly items-center h-full fadeInAnimation">
+        <div className="h-full bg-gradient-to-l from-transparent to-blue-950 overflow-y-auto overflow-x-hidden">
+          <div className="flex flex-col md:flex-row justify-evenly items-center h-full fadeInAnimation pt-6">
             <div className="flex flex-col gap-6">
                 {companies?.map((company) => (
                     <div 
@@ -31,7 +31,7 @@ export default async function Page({
             {searchParams?.companyId &&
               companyById.map((company) => (
                 <div 
-                  className="w-auto m-4 md:m-0 md:w-[30vw] h-[80vh] bg-[rgb(24,24,27)] border-gray-700 border p-2 rounded-lg flex flex-col divide-y divide-gray-700 items-center gap-2"
+                  className="w-auto m-4 md:m-0 md:w-[30vw] h-[80vh] bg-[rgb(24,24,27)] border-gray-700 border p-2 rounded-lg flex flex-col divide-y divide-gray-700 items-center gap-2 fadeInLeftAnimation"
                   key={company.id}
                 >
                   <Image

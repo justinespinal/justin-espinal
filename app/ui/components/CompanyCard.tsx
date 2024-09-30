@@ -42,7 +42,7 @@ export default function CompanyCard(
 
 
     return (
-        <div onClick={openCard} className="transition-colors bg-[rgb(24,24,27)] border-gray-700 border w-[75vw] md:w-[50vw] h-[20vh] pl-10 pt-10 pb-10 pr-5 rounded-md flex items-center hover:cursor-pointer hover:border-white">
+        <div onClick={openCard} className="transition-all bg-[rgb(24,24,27)] border-gray-700 border w-[75vw] md:w-[50vw] h-[20vh] pl-10 pt-10 pb-10 pr-5 rounded-md flex items-center hover:cursor-pointer hover:border-white hover:scale-110">
             <Image
               src={"/assets"+image_url}
               height={100}
